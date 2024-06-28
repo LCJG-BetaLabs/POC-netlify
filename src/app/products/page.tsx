@@ -74,7 +74,7 @@ export default function Products() {
   );
 }
 
-export const Highlight = ({
+const Highlight = ({
   children,
   className,
 }: {
@@ -102,8 +102,8 @@ const CARDS = [
       <p>
         This is an awesome website,Click the link:
         <Highlight>
-          <Link href={'https://wind2017-dream.github.io/imageGallery/'}>
-          wind2017-dream.github.io
+          <Link href={"https://wind2017-dream.github.io/imageGallery/"}>
+            wind2017-dream.github.io
           </Link>
         </Highlight>
         .Please follow the IG: <Highlight>wind2017_dream</Highlight>🙏
