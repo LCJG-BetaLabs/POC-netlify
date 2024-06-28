@@ -6,7 +6,6 @@ import {
   CardItem,
 } from "../common/components/ui/3dCard";
 import { AnimatedTooltip } from "../common/components/ui/toolTips";
-import icon from "../../public/icon.png";
 
 export default function Members() {
   const people = [
@@ -14,37 +13,43 @@ export default function Members() {
       id: 1,
       name: "John Doe",
       designation: "Software Engineer",
-      image: { icon },
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
-      image: icon,
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
-      image: icon,
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
-      image: icon,
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
-      image: icon,
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
     {
       id: 6,
       name: "Dora",
       designation: "The Explorer",
-      image: icon,
+      image:
+        "https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w",
     },
   ];
 
@@ -70,7 +75,7 @@ export default function Members() {
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
-              src={icon}
+              src="https://media.licdn.com/dms/image/D4D0BAQFp0siARlohxQ/company-logo_200_200/0/1683254736729?e=2147483647&v=beta&t=yn98YkQcNmvpNEfYHGKT8mICmX2qw4W09EubrpWi23w"
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"

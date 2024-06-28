@@ -2,10 +2,6 @@
 import Image from "next/image";
 import { Tabs } from "../common/components/ui/tabs";
 
-import betta from "../../../public/betta.png";
-import adminPortal from "../../../public/adminPortal.png";
-import sdDashboard from "../../../public/saDashboard.png";
-
 export default function Products() {
   const tabs = [
     {
@@ -15,7 +11,7 @@ export default function Products() {
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Betta</p>
           <Image
-            src={betta}
+            src="/betta.png"
             alt="Picture of the betta"
             className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
             width={1000}
@@ -30,13 +26,14 @@ export default function Products() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Elsie Admin Portal</p>
-          <Image
-            src={adminPortal}
+          {/* <Image
+            src="/adminPortal.png"
             alt="Picture of the adminPortal"
             className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
             width={1000}
             height={1000}
-          />
+          /> */}
+          <img src="/adminPortal.png" width="100%" alt="Login V2" />
         </div>
       ),
     },
@@ -47,7 +44,7 @@ export default function Products() {
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Elsie Sa Dashboard</p>
           <Image
-            src={sdDashboard}
+            src="/saDashboard.png"
             alt="Picture of the saDashboard"
             className="object-contain object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
             width={1000}
