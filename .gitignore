@@ -1,4 +1,5 @@
 # compiled output
+/.out
 /.next
 /dist
 /node_modules

@@ -1,51 +1,52 @@
-'use client'
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
 import {
   CardBody,
   CardContainer,
   CardItem,
-} from '../common/components/ui/3dCard'
-import { AnimatedTooltip } from '../common/components/ui/toolTips'
+} from "../common/components/ui/3dCard";
+import { AnimatedTooltip } from "../common/components/ui/toolTips";
+import icon from "../../public/icon.png";
 
 export default function Members() {
   const people = [
     {
       id: 1,
-      name: 'John Doe',
-      designation: 'Software Engineer',
-      image: '/icon.jpeg',
+      name: "John Doe",
+      designation: "Software Engineer",
+      image: { icon },
     },
     {
       id: 2,
-      name: 'Robert Johnson',
-      designation: 'Product Manager',
-      image: '/icon.jpeg',
+      name: "Robert Johnson",
+      designation: "Product Manager",
+      image: icon,
     },
     {
       id: 3,
-      name: 'Jane Smith',
-      designation: 'Data Scientist',
-      image: '/icon.jpeg',
+      name: "Jane Smith",
+      designation: "Data Scientist",
+      image: icon,
     },
     {
       id: 4,
-      name: 'Emily Davis',
-      designation: 'UX Designer',
-      image: '/icon.jpeg',
+      name: "Emily Davis",
+      designation: "UX Designer",
+      image: icon,
     },
     {
       id: 5,
-      name: 'Tyler Durden',
-      designation: 'Soap Developer',
-      image: '/icon.jpeg',
+      name: "Tyler Durden",
+      designation: "Soap Developer",
+      image: icon,
     },
     {
       id: 6,
-      name: 'Dora',
-      designation: 'The Explorer',
-      image: '/icon.jpeg',
+      name: "Dora",
+      designation: "The Explorer",
+      image: icon,
     },
-  ]
+  ];
 
   return (
     <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-screen overflow-hidden">
@@ -69,7 +70,7 @@ export default function Members() {
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
-              src="/icon.jpeg"
+              src={icon}
               height="1000"
               width="1000"
               className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -88,5 +89,5 @@ export default function Members() {
         </CardBody>
       </CardContainer>
     </div>
-  )
+  );
 }
