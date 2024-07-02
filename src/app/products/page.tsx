@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
 import { Tabs } from "../common/components/ui/tabs";
+import { CardStack } from "../common/components/ui/cardStack";
+
+import { cn } from "../../../utils/cn";
+import Link from "next/link";
 
 export default function Products() {
   const tabs = [
@@ -52,6 +56,15 @@ export default function Products() {
         </div>
       ),
     },
+    {
+      title: "FunnyCards",
+      value: "funnyCards",
+      content: (
+        <div className="h-[40rem] flex items-center rounded-2xl justify-center w-full bg-gradient-to-br from-purple-700 to-violet-900">
+          <CardStack items={CARDS} />
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -60,3 +73,68 @@ export default function Products() {
     </div>
   );
 }
+
+const Highlight = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <span
+      className={cn(
+        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
+        className
+      )}
+    >
+      {children}
+    </span>
+  );
+};
+
+const CARDS = [
+  {
+    id: 0,
+    name: "Nicholas",
+    designation: "Anime Fan",
+    content: (
+      <p>
+        This is an awesome website,Click the link:
+        <Highlight>
+          <Link href={"https://wind2017-dream.github.io/imageGallery/"}>
+            wind2017-dream.github.io
+          </Link>
+        </Highlight>
+        .Please follow the IG: <Highlight>wind2017_dream</Highlight>🙏
+      </p>
+    ),
+  },
+  {
+    id: 1,
+    name: "Elon Musk",
+    designation: "Senior Shitposter",
+    content: (
+      <p>
+        I dont like this Twitter thing,{" "}
+        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
+        would like to call it <Highlight>X.com</Highlight> so that it can easily
+        be confused with adult sites.
+      </p>
+    ),
+  },
+  {
+    id: 2,
+    name: "Tyler Durden",
+    designation: "Manager Project Mayhem",
+    content: (
+      <p>
+        The first rule of
+        <Highlight>Fight Club</Highlight> is that you do not talk about fight
+        club. The second rule of
+        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
+        club.
+      </p>
+    ),
+  },
+];
