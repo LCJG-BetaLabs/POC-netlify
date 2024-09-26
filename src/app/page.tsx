@@ -1,43 +1,43 @@
-'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { TypewriterEffect } from './common/components/ui/typeWriter'
-import { EvervaultCard } from './common/components/ui/visibleCard'
-import { Vortex } from './common/components/ui/vortex'
-import { HoveredLink, Menu, MenuItem } from './common/components/ui/navMemu'
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { TypewriterEffect } from "./common/components/ui/typeWriter";
+import { EvervaultCard } from "./common/components/ui/visibleCard";
+import { Vortex } from "./common/components/ui/vortex";
+import { HoveredLink, Menu, MenuItem } from "./common/components/ui/navMemu";
 
-import { cn } from '../../utils/cn'
+import { cn } from "../../utils/cn";
 
 export default function Home() {
-  const router = useRouter()
-  const [active, setActive] = useState<string | null>(null)
+  const router = useRouter();
+  const [active, setActive] = useState<string | null>(null);
 
   const words = [
     {
-      text: 'Think',
-      className: 'text-white-500 dark:text-white-500',
+      text: "Think",
+      className: "text-white-500 dark:text-white-500",
     },
     {
-      text: 'big',
-      className: 'text-white-500 dark:text-white-500',
+      text: "big",
+      className: "text-white-500 dark:text-white-500",
     },
     {
-      text: 'and',
-      className: 'text-white-500 dark:text-white-500',
+      text: "and",
+      className: "text-white-500 dark:text-white-500",
     },
     {
-      text: 'start',
-      className: 'text-white-500 dark:text-white-500',
+      text: "start",
+      className: "text-white-500 dark:text-white-500",
     },
     {
-      text: 'small.',
-      className: 'text-blue-500 dark:text-blue-500',
+      text: "small.",
+      className: "text-blue-500 dark:text-blue-500",
     },
-  ]
+  ];
 
   return (
     <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-screen overflow-hidden">
-      <div className={cn('fixed top-10 inset-x-0 max-w-2xl mx-auto z-50')}>
+      <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50")}>
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item="About">
             <div className="flex flex-col space-y-4 text-sm">
@@ -63,14 +63,14 @@ export default function Home() {
             <button
               className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm"
               onClick={() =>
-                router.push('https://hk.linkedin.com/company/betalabs-hk')
+                router.push("https://hk.linkedin.com/company/betalabs-hk")
               }
             >
               Join now
             </button>
             <button
               className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm"
-              onClick={() => router.push('https://www.betalabs.ai/')}
+              onClick={() => router.push("https://www.betalabs.ai/")}
             >
               Contact us
             </button>
@@ -82,5 +82,5 @@ export default function Home() {
         </div>
       </Vortex>
     </div>
-  )
+  );
 }
