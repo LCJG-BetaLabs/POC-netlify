@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bugsnag/browser-performance": "^2.9.1",
+    "@bugsnag/js": "^8.0.0",
+    "@bugsnag/plugin-react": "^8.0.0",
     "@sentry/nextjs": "^8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.12",
